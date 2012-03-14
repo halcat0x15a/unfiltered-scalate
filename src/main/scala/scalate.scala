@@ -4,7 +4,7 @@ import org.fusesource.scalate.{
   TemplateEngine, Binding, DefaultRenderContext, RenderContext}
 import unfiltered.request.{Path,HttpRequest}
 import unfiltered.response.{ResponseWriter}
-import java.io.{File,Writer,PrintWriter}
+import java.io.{File,Writer,OutputStreamWriter,PrintWriter}
 
 object Scalate {
   /** Constructs a ResponseWriter for Scalate templates.
@@ -20,7 +20,7 @@ object Scalate {
     bindings: List[Binding] = Nil,
     additionalAttributes: Seq[(String, Any)] = Nil
   ) = new ResponseWriter {
-    def write(writer: Writer) {
+    def write(writer: OutputStreamWriter) {
       val printWriter = new PrintWriter(writer)
       try {
         val scalateTemplate = engine.load(template, bindings)
