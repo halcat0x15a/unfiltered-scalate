@@ -1,7 +1,7 @@
 seq(lsSettings :_*)
 
 libraryDependencies <++= scalaVersion { v => Seq(
-  "net.databinder" %% "unfiltered" % "0.5.3",
+  "net.databinder" %% "unfiltered" % "0.6.1",
   "org.fusesource.scalate" % "scalate-core" % "1.5.3",
   "org.fusesource.scalate" % "scalate-util" % "1.5.3" % "test",
   "org.scala-lang" % "scala-compiler" % v % "test",
