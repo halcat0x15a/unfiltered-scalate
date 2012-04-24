@@ -9,4 +9,4 @@ libraryDependencies <++= scalaVersion { v => Seq(
   "org.scala-tools.testing" % "specs_2.9.1" % "1.6.9" % "test"
 ) }
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.9.2"
