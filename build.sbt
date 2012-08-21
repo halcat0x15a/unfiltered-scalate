@@ -1,8 +1,10 @@
 seq(lsSettings :_*)
 
+resolvers += "fusesource" at "http://repo.fusesource.com/nexus/content/repositories/snapshots"
+
 libraryDependencies <++= scalaVersion { v => Seq(
   "net.databinder" %% "unfiltered" % "0.6.3",
-  "org.fusesource.scalate" % "scalate-core" % "1.5.3",
+  "org.fusesource.scalate" % "scalate-core" % "1.6.0-SNAPSHOT",
   "org.fusesource.scalate" % "scalate-util" % "1.5.3" % "test",
   "org.scala-lang" % "scala-compiler" % v % "test",
   "org.mockito" % "mockito-core" % "1.8.5" % "test",
